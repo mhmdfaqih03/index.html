@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Prisma Center - Masjid Jami Al Ikhlas</title>
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --primary-blue: #1976d2;
+            --dark-bg: #121212;
+            --text-light: #f5f5f5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
+            padding: 30px 20px;
+        }
+        .container { width: 90%; max-width: 800px; margin: auto; padding: 20px; }
+        .hero { padding: 40px 0; }
+        .card {
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 1px solid #333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .marquee-box { font-size: 1.2em; color: #ffeb3b; padding: 10px; background: #000; border-radius: 5px; }
+        #datetime { font-size: 1.2em; font-weight: bold; margin-bottom: 20px; color: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ambulance Prisma Center</h1>
+        <p>Masjid Jami Al Ikhlas, Condet, Balekambang, Kramat Jati, Jakarta Timur</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <div id="datetime"></div>
+            <div class="marquee-box">
+                <marquee>Siap Melayani 24 Jam dengan Hati & Profesional | Peduli untuk Sesama | Jangkauan JABODETABEK & Sekitarnya</marquee>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Layanan Kami</h2>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Pengantaran & Penjemputan Pasien</li>
+                <li>Pengantaran Jenazah (Dalam & Luar Kota)</li>
+                <li>Siaga Bencana & Bakti Sosial</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Butuh Ambulance?</h2>
+            <p>Kami memiliki satu unit armada siap melayani.</p>
+            <p><strong>Jika armada sibuk, hubungi: 112 atau 119</strong></p>
+            <a href="https://wa.me/6285128009112" class="btn" style="background: #25d366;">Chat Admin via WhatsApp</a>
+        </section>
+
+        <section class="card">
+            <h2>Donasi Operasional</h2>
+            <p>Dukung kami agar tetap bisa melayani masyarakat:</p>
+            <a href="https://linktr.ee/ambulanceprismacenter" class="btn">Linktr.ee</a>
+            <a href="https://sociabuzz.com/prismaalikhlas/tribe" class="btn">SociaBuzz</a>
+            <p>Transfer: <strong>SeaBank - 901572920128</strong></p>
+        </section>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
